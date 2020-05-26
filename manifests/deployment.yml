@@ -1,0 +1,16 @@
+apiVersion : apps/v1beta1
+kind: Deployment
+metadata:
+  name: anilsirispringdemo 
+spec:
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: anilsirispringdemo 
+    spec:
+      containers:
+        - name: anilsirispringdemo 
+          image: anilsiri80cr.azurecr.io/anilsirispringdemo
+          ports:
+          - containerPort: 8090
